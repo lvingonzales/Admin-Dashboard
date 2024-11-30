@@ -197,6 +197,7 @@ input {
 }
 
 .project {
+    padding: .5rem;
     display: grid;
     gap: 1rem;
     grid-template-rows: 2rem 1fr;
@@ -206,15 +207,15 @@ input {
 
 .project-cards-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(auto-fit, 1);
+    grid-template-columns: repeat(2, min-content);
+    grid-template-rows: repeat(auto-fit, 1fr);
     gap: 1.5rem;
 }
 
 .project-card {
     cursor: pointer;
     width: 25rem;
-    height: 15rem;
+    height: 13rem;
     background: linear-gradient(to right, #f4b342 2%, #ffffff 2%);
     border: 1px solid lightgray;
     border-radius: 10px;
@@ -256,7 +257,7 @@ input {
 
 .project-widgets > * {
     cursor: pointer;
-    width: 2rem;
+    width: 1.5rem;
 }
 
 #merge-icon {
