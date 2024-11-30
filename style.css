@@ -23,19 +23,22 @@ body {
 
 .sidebar {
     padding: 1rem;
-    padding-top: 0.25rem;
     display: grid;
     grid-row: span 2;
-    gap: 2rem;
-    grid-template-rows: minmax(50px, 80px) 2fr 3fr;
+    grid-template-rows: min-content min-content min-content;
     background-color: #0f766e;
-    left: 0;
-    position: sticky;
+    position: relative;
     z-index: 10;
     box-shadow: 2px 0px 10px rgba(0, 0, 0, .5);
 }
 
+.side-wrapper {
+    gap: 2rem;
+}
+
 .sidebar > div {
+    position: sticky;
+    top: 1rem;
     display: grid;
     color: white;
 }
@@ -62,6 +65,7 @@ li {
     cursor: pointer;
     display: grid;
     grid-template-columns: 1fr 10fr;
+    align-items: center;
 }
 
 ul {
@@ -70,7 +74,7 @@ ul {
     padding-top: 1rem;
     display: grid;
     gap: 1rem;
-    grid-template-rows: repeat(auto-fit, minmax(20px, 40px));
+    grid-template-rows: repeat(auto-fit, min-content);
     font-weight: 700;
 }
 
@@ -157,6 +161,10 @@ input {
     margin: 0rem;
 }
 
+.heroname > p:first-child {
+    font-weight: 600;
+}
+
 .heroname > p:last-child {
     font-size: 2rem;
     font-weight: 700;
@@ -189,6 +197,7 @@ input {
 
 .project {
     display: grid;
+    gap: 1rem;
     grid-template-rows: 2rem 1fr;
     font-size: 1.5rem;
     font-weight: 500;
@@ -213,6 +222,7 @@ input {
     grid-template-rows: 4fr 1fr;
     padding: 1rem;
     gap: 1rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .25);
 }
 
 .project-info {
@@ -232,6 +242,7 @@ input {
 
 .project-info > p:last-child {
     font-size: 1rem;
+    color: #646464;
 }
 
 .project-widgets {
