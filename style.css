@@ -46,6 +46,7 @@ body {
 .side-header {
     display: grid;
     grid-template-columns: 1fr 10fr;
+    gap: 1rem;
     align-items: center;
 }
 
