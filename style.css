@@ -1,7 +1,10 @@
+@import url(https://fonts.bunny.net/css?family=aclonica:400|roboto:100,300,400,500,700,900);
+
 :root {
     height: 100%;
     --avatar-small-size: 40px;
     --avatar-large-size: 64px;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -26,7 +29,8 @@ body {
     gap: 2rem;
     grid-template-rows: minmax(50px, 80px) 2fr 3fr;
     background-color: #0f766e;
-    position: relative;
+    left: 0;
+    position: sticky;
     z-index: 10;
     box-shadow: 2px 0px 10px rgba(0, 0, 0, .5);
 }
@@ -88,7 +92,8 @@ ul {
     align-content: center;
     background-color: #ffffff;
     overflow: clip;
-    position: relative;
+    top: 0;
+    position: sticky;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, .5);
 }
 
@@ -180,4 +185,68 @@ input {
     padding: 2rem;
     display: grid;
     grid-template-columns: 2fr 1fr;
+}
+
+.project {
+    display: grid;
+    grid-template-rows: 2rem 1fr;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.project-cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(auto-fit, 1);
+    gap: 1.5rem;
+}
+
+.project-card {
+    cursor: pointer;
+    width: 25rem;
+    height: 15rem;
+    background: linear-gradient(to right, #f4b342 2%, #ffffff 2%);
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 4fr 1fr;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.project-info {
+    grid-column: span 3;
+    padding: 1rem;
+    padding-right: 5rem;
+}
+
+.project-info > * {
+    margin: 0px;
+}
+
+.project-info > p:first-child {
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+.project-info > p:last-child {
+    font-size: 1rem;
+}
+
+.project-widgets {
+    grid-column: 3 / span 1;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.project-widgets > * {
+    cursor: pointer;
+    width: 2rem;
+}
+
+#merge-icon {
+    transform: rotate(180deg);
 }
