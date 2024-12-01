@@ -22,7 +22,6 @@ body {
 }
 
 .sidebar {
-    padding: 1rem;
     display: grid;
     grid-row: span 2;
     grid-template-rows: min-content min-content min-content;
@@ -48,6 +47,7 @@ body {
     grid-template-columns: 1fr 10fr;
     gap: 1rem;
     align-items: center;
+    padding-left: 1rem;
 }
 
 .sidebar > div > h1, .sidebar > div > span {
@@ -66,16 +66,22 @@ li {
     cursor: pointer;
     display: grid;
     grid-template-columns: 1fr 10fr;
+    gap: 1rem;
     align-items: center;
+    padding-left: 1rem;
+}
+
+li:hover,
+button:hover {
+    background-color: #093d39;
 }
 
 ul {
+    padding: 0;
     margin: 0px;
-    padding-left: 10px;
     padding-top: 1rem;
     display: grid;
-    gap: 1rem;
-    grid-template-rows: repeat(auto-fit, min-content);
+    grid-template-rows: repeat(6, 3.5rem);
     font-weight: 700;
 }
 
@@ -208,7 +214,7 @@ input {
 .project-cards-container {
     display: grid;
     grid-template-columns: repeat(2, min-content);
-    grid-template-rows: repeat(auto-fit, 1fr);
+    grid-template-rows: repeat(auto-fit, minmax(min-content, 100%));
     gap: 1.5rem;
 }
 
@@ -220,7 +226,7 @@ input {
     border: 1px solid lightgray;
     border-radius: 10px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(min-content, 1fr));
     grid-template-rows: 4fr 1fr;
     padding: 1rem;
     gap: 1rem;
@@ -260,6 +266,25 @@ input {
     width: 1.5rem;
 }
 
+.project-widgets > *:hover {
+    background-color: #093d39;
+    border-radius: 10px;
+}
+
 #merge-icon {
     transform: rotate(180deg);
+}
+
+.main-sidebar {
+    padding: .5rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.announce {
+    display: grid;
+    grid-template-rows: 2rem 1fr;
+    gap: 1rem;
 }
