@@ -66,15 +66,20 @@ body {
 
 .sidebar {
     grid-row: span 2;
-    grid-template-rows: min-content min-content min-content;
+    grid-template-rows: min-content;
     position: relative;
     z-index: 10;
     height: 100%;
 }
 
 .side-wrapper {
+    top: 0;
     gap: 2rem;
-} 
+}
+
+.side-wrapper > div + div {
+    margin-top: 1rem;
+}
 
 .side-header {
     grid-template-columns: 1fr 10fr;
